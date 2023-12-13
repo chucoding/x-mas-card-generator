@@ -1,7 +1,6 @@
 "use client";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import CloudCardBig from "../modules/cloudCardBig";
 
 export default function ResultLoading({ scoreList }: any) {
   const router = useRouter();
@@ -17,13 +16,11 @@ export default function ResultLoading({ scoreList }: any) {
 
   return (
     <div>
-      <CloudCardBig>
-        <div className="flex justify-center">
-          <h1 className="text-[45px] font-medium absolute top-[150px] left-[115px] tracking-[-2px]">
-            꿈력 충전 중...💤
-          </h1>
-        </div>
-      </CloudCardBig>
+      <div className="flex justify-center">
+        <h1 className="text-[45px] font-medium absolute top-[150px] left-[115px] tracking-[-2px]">
+          꿈력 충전 중...💤
+        </h1>
+      </div>
     </div>
   );
 }

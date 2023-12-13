@@ -1,17 +1,14 @@
 "use client";
 import { useState } from "react";
 import Home from "../components/templates/home";
-import OnBoarding from "../components/templates/onboarding";
-import Scenario from "../components/templates/scenario";
+import Generator from "../components/templates/generator";
 
 export default function Main() {
   const [route, setRoute] = useState("");
 
   switch (route) {
-    case "onboarding":
-      return <OnBoarding setRoute={setRoute} />;
-    case "scenario":
-      return <Scenario setRoute={setRoute} />;
+    case "generator":
+      return <Generator setRoute={setRoute} />;
     default:
       return <Home setRoute={setRoute} />;
   }

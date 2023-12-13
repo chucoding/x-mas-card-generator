@@ -1,38 +1,31 @@
 "use client";
-import CloudCardBig from "../modules/cloudCardBig";
+import Lottie from "react-lottie-player";
+import lottieJson from "../../resources/christmas-tree.json";
+import { useState } from "react";
+import StartButton from "../modules/startButton";
 
 export default function Home({ setRoute }: any) {
+  const [render, setRender] = useState(false);
   return (
-    <>
-      <div
-        className="inline-block text-center"
-        style={{ fontFamily: "KCCChassam" }}
-      >
-        <CloudCardBig>
-          <div className="absolute top-[36%] left-[35%]">
-            <h1 className="text-[45px] text-white tracking-[-2px]">
-              크리스마스
-              <br />
-              카드 만들기
-            </h1>
-          </div>
-        </CloudCardBig>
-      </div>
-      <div className="relative top-[70%]" style={{ fontFamily: "KCCChassam" }}>
-        <button
-          className="bg-white hover:bg-[#808080] text-black font-bold py-[10px] px-[35px] rounded-full text-[20px]"
-          onClick={() => {
-            alert("🚧 죄송합니다. 아직 준비중입니다😂 🚧");
-            //setRoute("onboarding");
-          }}
-        >
-          시작하기
+    <div
+      className="inline-block text-center "
+      style={{ fontFamily: "KCCChassam" }}
+    >
+      {render && (
+        <h1 className="absolute top-[16%] left-[24%] text-[45px] text-white animate-fadein">
+          크리스마스
           <br />
-        </button>
-        <p className="mt-[2px] text-gray-100 text-[12px]">
-          모바일 환경을 추천합니다
-        </p>
-      </div>
-    </>
+          카드 만들기
+        </h1>
+      )}
+      <Lottie
+        className="absolute top-[36%] left-[10%]"
+        animationData={lottieJson}
+        play
+        style={{ width: "300px" }}
+        onEnterFrame={() => setRender(true)}
+      />
+      <StartButton onClick={() => setRoute("generator")} />
+    </div>
   );
 }
