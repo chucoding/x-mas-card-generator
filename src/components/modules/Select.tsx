@@ -5,9 +5,9 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 interface SelectProps {}
 
 const options = [
-  "이모티콘, 애교 가득 낭만 고양이",
-  "장난꾸러기",
-  "인자하고 따뜻한 산타할아버지",
+  "사랑스럽고 애교많은 강아지 🐶",
+  "재미있는 장난꾸러기 친구 😛",
+  "자상하고 다정한 산타할아버지 🎅🏻",
 ];
 
 const Select: React.FC<SelectProps> = () => {
