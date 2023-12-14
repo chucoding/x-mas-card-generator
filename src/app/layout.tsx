@@ -17,7 +17,6 @@ export default function RootLayout({
         <main
           className={`
         absolute
-        bg-red-400
         min-w-full
         min-h-full
         w-full

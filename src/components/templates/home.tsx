@@ -8,7 +8,7 @@ export default function Home({ setRoute }: any) {
   const [render, setRender] = useState(false);
   return (
     <div
-      className="inline-block text-center "
+      className="inline-block text-center w-full h-full bg-red-400"
       style={{ fontFamily: "KCCChassam" }}
     >
       {render && (

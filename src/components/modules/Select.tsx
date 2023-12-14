@@ -42,7 +42,7 @@ const Select: React.FC<SelectProps> = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="relative w-full md:w-[30rem]">
+    <div ref={containerRef} className="relative w-full px-10 pt-10">
       <button
         onClick={toggle}
         className={`flex w-full items-center justify-between rounded bg-white p-2 ${
@@ -58,10 +58,11 @@ const Select: React.FC<SelectProps> = () => {
       </button>
 
       {open && (
-        <ul className="z-2 absolute mt-1 w-full md:w-[30rem] rounded bg-gray-50 ring-1 ring-gray-300">
+        <ul className="z-2 relative mt-1 w-full p-1 rounded bg-gray-50 ring-1 ring-gray-300">
           {options.map((item) => {
             return (
               <li
+                key={item}
                 className="cursor-pointer select-none p-2 hover:bg-gray-200"
                 onClick={() => setOptionHandler(item)}
               >
