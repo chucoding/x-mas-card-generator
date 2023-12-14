@@ -2,17 +2,20 @@ import React, { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
-interface SelectProps {}
-
 const options = [
   "사랑스럽고 애교많은 강아지 🐶",
   "재미있는 장난꾸러기 친구 😛",
   "자상하고 다정한 산타할아버지 🎅🏻",
 ];
 
-const Select: React.FC<SelectProps> = () => {
+const Select = ({
+  value,
+  setValue,
+}: {
+  value: String;
+  setValue: React.Dispatch<React.SetStateAction<string>>;
+}) => {
   const [open, setOpen] = useState(false);
-  const [option, setOption] = useState("");
   const containerRef = useRef<HTMLDivElement>(null);
 
   const toggle = () => {
@@ -20,7 +23,7 @@ const Select: React.FC<SelectProps> = () => {
   };
 
   const setOptionHandler = (val: string) => {
-    setOption(val);
+    setValue(val);
     setOpen(false);
   };
 
@@ -50,7 +53,7 @@ const Select: React.FC<SelectProps> = () => {
         } md:w-full`}
       >
         <span>
-          {option === "" ? "카드를 만들어줄 도우미를 선택하세요 🙂" : option}
+          {value === "" ? "카드를 만들어줄 도우미를 선택하세요 🙂" : value}
         </span>
         <div className="flex items-center">
           <FontAwesomeIcon icon={faChevronDown} rotation={open ? 180 : 0} />
