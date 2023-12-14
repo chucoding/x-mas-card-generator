@@ -7,8 +7,9 @@ import lottieJson from "../../resources/love-letter.json";
 import Select from "../modules/Select";
 import Textarea from "../modules/Textarea";
 import Input from "../modules/Input";
+import { generate } from "../../api/ncloud-api";
 
-export default function Generator({ setNext }: any) {
+export default function Generator() {
   const [select, setSelect] = useState("");
   const [input, setInput] = useState("");
   const [text, setText] = useState("");
@@ -29,7 +30,7 @@ export default function Generator({ setNext }: any) {
           marginRight: "2.5rem",
           cursor: "pointer",
         }}
-        onClick={() => alert("hi")}
+        onClick={() => generate(select, input, text)}
       />
     </div>
   );
