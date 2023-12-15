@@ -7,12 +7,28 @@ import lottieJson from "../../resources/love-letter.json";
 import Select from "../modules/Select";
 import Textarea from "../modules/Textarea";
 import Input from "../modules/Input";
-import { generate } from "../../api/ncloud-api";
 
-export default function Generator() {
+export default function Generator({
+  setRoute,
+  setData,
+}: {
+  setRoute: React.Dispatch<React.SetStateAction<string>>;
+  setData: React.Dispatch<
+    React.SetStateAction<{
+      select: string;
+      input: string;
+      text: string;
+    }>
+  >;
+}) {
   const [select, setSelect] = useState("");
   const [input, setInput] = useState("");
   const [text, setText] = useState("");
+
+  const handleButtonClick = () => {
+    setData({ select, input, text });
+    setRoute("result");
+  };
 
   return (
     <div className="w-full h-full bg-[url('/img/background.jpg')] bg-cover">
@@ -30,7 +46,7 @@ export default function Generator() {
           marginRight: "2.5rem",
           cursor: "pointer",
         }}
-        onClick={() => generate(select, input, text)}
+        onClick={handleButtonClick}
       />
     </div>
   );
