@@ -56,7 +56,10 @@ const Select = ({
           {value === "" ? "카드를 만들어줄 도우미를 선택하세요 🙂" : value}
         </span>
         <div className="flex items-center">
-          <FontAwesomeIcon icon={faChevronDown} rotation={open ? 180 : 0} />
+          <FontAwesomeIcon
+            icon={faChevronDown}
+            rotation={open ? 180 : undefined}
+          />
         </div>
       </button>
 
