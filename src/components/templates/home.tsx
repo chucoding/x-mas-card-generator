@@ -4,7 +4,7 @@ import lottieJson from "../../resources/christmas-tree.json";
 import { useState } from "react";
 import StartButton from "../modules/startButton";
 
-export default function Home({ setRoute }: any) {
+export default function Home({ count, setRoute }: any) {
   const [render, setRender] = useState(false);
   return (
     <div
@@ -25,7 +25,7 @@ export default function Home({ setRoute }: any) {
         style={{ width: "300px" }}
         onEnterFrame={() => setRender(true)}
       />
-      <StartButton onClick={() => setRoute("generator")} />
+      <StartButton count={count} onClick={() => setRoute("generator")} />
     </div>
   );
 }

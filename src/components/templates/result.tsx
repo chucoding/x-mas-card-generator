@@ -8,9 +8,10 @@ interface ResultProps {
     input: string;
     text: string;
   };
+  setCount: React.Dispatch<React.SetStateAction<number>>;
 }
 
-export default function Result({ data }: ResultProps) {
+export default function Result({ data, setCount }: ResultProps) {
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState("");
 
@@ -32,8 +33,10 @@ export default function Result({ data }: ResultProps) {
       }
 
       const resultData = await response.json();
-      console.log(resultData);
       setMessage(resultData.body.result.message.content);
+      setCount((count) => {
+        return count + resultData.body.result.outputLength;
+      });
     } catch (err) {
       console.error("Error during fetch:", err);
     } finally {
