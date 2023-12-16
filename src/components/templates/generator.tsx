@@ -26,7 +26,17 @@ export default function Generator({
   const [text, setText] = useState("");
 
   const handleButtonClick = () => {
-    setData({ select, input, text });
+    if (select === "") {
+      alert("도우미를 선택해주세요! 🧑🏻‍🎄");
+      return;
+    } else if (input === "") {
+      alert("누구에게 보내실건가요? 🤔");
+      return;
+    }
+
+    const userText: string = text === "" ? "크리스마스 잘 보내 ㅎㅎ" : text;
+
+    setData({ select, input, text: userText });
     setRoute("result");
   };
 
