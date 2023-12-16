@@ -4,6 +4,7 @@ export default function Head() {
     "HyperCLOVA X 모델을 이용해 크리스마스 카드를 자동으로 생성해주는 웹 사이트";
   const url =
     "https://x-mas-card-generator-byjgfzwv8-chucodings-projects.vercel.app";
+  const thumbnail = `/img/thumbnail.png`;
 
   return (
     <>
@@ -19,13 +20,13 @@ export default function Head() {
       <meta name="og:description" content={description} />
       <meta name="og:type" content="website" />
       <meta name="og:url" content={url} />
-      <meta name="og:image" content="/favicon.ico"></meta>
+      <meta name="og:image" content={thumbnail} />
       <meta name="twitter:site_name" content={title} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:type" content="website" />
       <meta name="twitter:url" content={url} />
-      <meta name="twitter:image" content="/favicon.ico"></meta>
+      <meta name="twitter:image" content={thumbnail}></meta>
       <link rel="icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" href="/favicon.ico" />
       <link rel="shortcut icon" href="/favicon.ico" />
