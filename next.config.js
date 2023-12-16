@@ -8,7 +8,8 @@ const nextConfig = {
     return [
       {
         source: "/:path*",
-        destination: "https://clovastudio.stream.ntruss.com/:path*",
+        destination:
+          "https://5l1o3xbgj7.apigw.ntruss.com/x-mas-generator/:path*",
       },
     ];
   },
