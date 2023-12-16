@@ -26,8 +26,7 @@ export default function Head() {
       <meta name="twitter:type" content="website" />
       <meta name="twitter:url" content={url} />
       <meta name="twitter:image" content={thumbnail}></meta>
-      <link rel="icon" href="/favicon.ico" />{" "}
-      {/*https://www.flaticon.com/kr/free-icon/christmas-card_2224608?term=%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4+%EC%B9%B4%EB%93%9C&page=2&position=89&origin=search&related_id=2224608*/}
+      <link rel="icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" href={thumbnail} />
       <link rel="shortcut icon" href={thumbnail} />
     </>
