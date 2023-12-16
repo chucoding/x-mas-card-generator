@@ -53,7 +53,7 @@ export default function Result({ data }: ResultProps) {
         style={{ fontFamily: "KCCChassam" }}
       >
         <div className="relative top-[10%] bg-[url('/img/result.png')] bg-cover h-[400px] animate-fadein">
-          <h1 className="absolute top-[45%] left-[25%]">{data.input}</h1>
+          <h1 className="absolute top-[45%] left-[25%]">To. {data.input}</h1>
           <p className="absolute top-[55%] left-[25%] w-[50%] text-xs">
             {message}
           </p>
