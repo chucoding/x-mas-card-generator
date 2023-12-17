@@ -21,6 +21,7 @@ HyperCLOVA X 모델을 이용하여 크리스마스 카드를 자동으로 생�
   <img src="https://img.shields.io/badge/react v18-61DAFB?style=for-the-badge&logo=React&logoColor=white">
   <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white">
   <img src="https://img.shields.io/badge/Tailwind CSS-06B6D4?style=for-the-badge&logo=Tailwind CSS&logoColor=white">
+  <img src="https://img.shields.io/badge/python v11-3776AB?style=for-the-badge&logo=python&logoColor=white">
 </div>
 <br/>
 
