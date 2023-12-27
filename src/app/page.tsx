@@ -27,7 +27,6 @@ export default function Main() {
 
   useEffect(() => {
     if (count > 0) {
-      console.log(count);
       supabase
         .from("hyperclova")
         .update({ token: count })
